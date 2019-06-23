@@ -1,0 +1,71 @@
+Quick ways to check for Prime and find next Prime in Java
+
+Many programming contest problems are somehow related Prime Numbers. Either we are required to check Prime Numbers, or we are asked to perform certain functions for all prime number between 1 to N. Example: Calculate the sum of all prime numbers between 1 and 1000000.
+
+Java provides two function under java.math.BigInteger to deal with Prime Numbers.
+
+isProbablePrime(int certainty): A method in BigInteger class to check if a given number is prime. For certainty = 1, it return true if BigInteger is prime and false if BigInteger is composite.
+Below is Java program to demonstrate above function.
+
+// A Java program to check if a number is prime using 
+// inbuilt function 
+import java.util.*; 
+import java.math.*; 
+  
+class CheckPrimeTest 
+{ 
+    //Function to check and return prime numbers 
+    static boolean checkPrime(long n) 
+    { 
+        // Converting long to BigInteger 
+        BigInteger b = new BigInteger(String.valueOf(n)); 
+  
+        return b.isProbablePrime(1); 
+    } 
+  
+    // Driver method 
+    public static void main (String[] args) 
+                         throws java.lang.Exception 
+    { 
+       long n = 13; 
+       System.out.println(checkPrime(n)); 
+    } 
+} 
+
+
+Output:
+true
+
+
+nextProbablePrime() : Another method present in BigInteger class. This functions returns the next Prime Number greater than current BigInteger.
+Below is Java program to demonstrate above function.
+
+
+
+// Java program to find prime number greater than a 
+// given number using built in method 
+import java.util.*; 
+import java.math.*; 
+  
+class NextPrimeTest 
+{ 
+    // Function to get nextPrimeNumber 
+    static long nextPrime(long n) 
+    { 
+        BigInteger b = new BigInteger(String.valueOf(n)); 
+        return Long.parseLong(b.nextProbablePrime().toString()); 
+    } 
+  
+    // Driver method 
+    public static void main (String[] args) 
+                    throws java.lang.Exception 
+    { 
+        long n = 14; 
+        System.out.println(nextPrime(n)); 
+    } 
+} 
+
+
+Output:
+
+17

@@ -1,0 +1,95 @@
+In the word HACKEREARTH, the positions of the first and eleventh letters are interchanged. Then, the positions of the second and the tenth letters are interchanged, and so on until the positions of the fifth and seventh letters are interchanged, keeping the position of the sixth letter unchanged.
+
+Which of the following letters is the third letter to the right of the sixth letter from the left?
+
+R
+A
+T
+E
+
+
+
+Paul caught a prize fish last weekend. The measurements were as follows:
+
+Head: 10 cm long
+Tail: Length of the head + one third the length of the body
+If the length of the body equals the length of the head plus twice that of the tail, what is the total length of the fish?
+
+40 cm
+90 cm
+140 cm
+160 cm
+
+
+
+Mike pointed to a photograph and said, "The lady in the photograph is my nephew’s maternal grandmother." How is the lady in the photograph related to Mike’s sister who has no other sister?
+
+Mother-in-law
+Cousin
+Sister-in-law
+Mother
+
+
+
+Study the following information carefully and answer the question:
+A, B, C, D, E, F, and G are sitting around a circle facing the center. A is third to the left of G and to the immediate right of D. B is second to the left of F, who is not an immediate neighbor of E.
+Who is second to the left of D?
+
+A
+E
+B
+F
+
+
+
+A group of nine people went to a restaurant for lunch, 8 among them spent Rs.12 each on their meals and the ninth spent Rs.8 more than the average expenditure of all the nine. What is the total money spent?
+
+117
+120
+107
+None of these
+
+
+
+If Bob runs at a speed of 20 km/hr, then how many minutes will Bob take to cover the distance of 400 m?
+
+<span class="mathjax-latex">1to(1/2)</span>
+<span class="mathjax-latex">1to(12/60)</span>
+Both of these
+None of these
+
+
+
+A dog takes 4 leaps for every 5 leaps of a hare but 3 leaps of a dog are equal to 4 leaps of the hare. Compare their speeds.
+
+2:3
+61:51
+16:15
+5:3
+
+
+
+Johnson works twice more than Ben to complete a work and together they can finish the work in 18 days. In how many days will Johnson alone finish the work?
+
+27
+45
+34
+32
+
+
+
+The population of a town is 1,76,400. If it increases at the rate of 5% per annum, then what was the population 2 years ago?
+
+61000
+160000
+12000
+None of these
+
+
+
+What is the compound interest on USD 7500 at 4% per annum for 2 years, compounded annually?
+
+USD 8112
+USD 2118
+USD 1600
+USD 1250

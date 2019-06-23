@@ -1,0 +1,100 @@
+Difference between Scanner and BufferReader Class in Java
+java.util.Scanner class is a simple text scanner which can parse primitive types and strings. It internally uses regular expressions to read different types.
+
+Java.io.BufferedReader class reads text from a character-input stream, buffering characters so as to provide for the efficient reading of sequence of characters
+
+Following are differences between above two.
+
+Issue with Scanner when nextLine() is used after nextXXX()
+Try to guess the output of following code :
+
+
+// Code using Scanner Class 
+import java.util.Scanner; 
+class Differ 
+{ 
+     public static void main(String args[]) 
+     { 
+         Scanner scn = new Scanner(System.in); 
+         System.out.println("Enter an integer"); 
+         int a = scn.nextInt(); 
+         System.out.println("Enter a String"); 
+         String b = scn.nextLine(); 
+         System.out.printf("You have entered:- "
+                 + a + " " + "and name as " + b); 
+     } 
+} 
+
+
+Input:
+50
+Geek
+
+Output:
+Enter an integer
+Enter a String
+You have entered:- 50 and name as
+
+
+Let us try the same using Buffer class and same Input
+
+// Code using Buffer Class 
+import java.io.*; 
+class Differ 
+{ 
+    public static void main(String args[]) 
+                  throws IOException 
+    { 
+        BufferedReader br = new BufferedReader(new
+        InputStreamReader(System.in)); 
+        System.out.println("Enter an integer"); 
+        int a = Integer.parseInt(br.readLine()); 
+        System.out.println("Enter a String"); 
+        String b = br.readLine(); 
+        System.out.printf("You have entered:- " + a + 
+                          " and name as " + b); 
+    } 
+} 
+
+Input:
+50
+Geek
+
+Output:
+Enter an integer
+Enter a String
+you have entered:- 50 and name as Geek
+
+
+In Scanner class if we call nextLine() method after any one of the seven nextXXX() method then the nextLine() doesn’t not read values from console and cursor will not come into console it will skip that step. The nextXXX() methods are nextInt(), nextFloat(), nextByte(), nextShort(), nextDouble(), nextLong(), next().
+
+In BufferReader class there is no such type of problem. This problem occurs only for Scanner class, due to nextXXX() methods ignore newline character and nextLine() only reads till first newline character. If we use one more call of nextLine() method between nextXXX() and nextLine(), then this problem will not occur because nextLine() will consume the newline character. This problem is same as scanf() followed by gets() in C/C++.
+
+See this for the corrected program. ------
+
+
+// Code using Scanner Class
+import java.util.Scanner;
+class Differ
+ {
+     public static void main(String args[])
+     {
+         Scanner scn = new Scanner(System.in);
+         System.out.println("Enter an integer");
+         int a = scn.nextInt();
+         scn.nextLine();
+         System.out.println("Enter a String");
+         String b = scn.nextLine();
+         System.out.printf("You have entered:- "
+                 + a + " " + "and name as " + b);
+     }
+}
+
+
+
+Other differences:
+
+BufferedReader is synchronous while Scanner is not. BufferedReader should be used if we are working with multiple threads.
+BufferedReader has significantly larger buffer memory than Scanner.
+The Scanner has a little buffer (1KB char buffer) as opposed to the BufferedReader (8KB byte buffer), but it’s more than enough.
+BufferedReader is a bit faster as compared to scanner because scanner does parsing of input data and BufferedReader simply reads sequence of characters.
