@@ -31,15 +31,13 @@ class TestClass {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringBuilder sb = new StringBuilder();
         while(true){
-        String line = br.readLine();
-        if(!line.equals("42")){
-            sb.append(line+"\n");
-        }else{
-            break;
+			String line = br.readLine();
+			if(!line.equals("42")){
+				sb.append(line+"\n");
+			}else{
+				break;
+			}
         }
-        }
- 
- 
         System.out.println(sb);
     }
 }

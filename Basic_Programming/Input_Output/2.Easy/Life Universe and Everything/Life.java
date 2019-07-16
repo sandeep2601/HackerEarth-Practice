@@ -19,16 +19,22 @@ Time Limit:	5.0 sec(s) for all input files combined.
 
 
 
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
 
 class Life {
     public static void main(String args[] ) throws Exception {
 
-        Scanner s = new Scanner(System.in);
-        int k=s.nextInt();
-        while(k!=42){
-            System.out.println(k);
-            k=s.nextInt();
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		PrintWriter pw = new PrintWriter(System.out);
+		StringBuilder sb = new StringBuilder();
+        int k;
+        while((k=Integer.parseInt(br.readLine())) != 42){
+            sb.append(k).append("\n");
         }
+		pw.print(sb);
+		//pw.println("42");
+		pw.flush();
     }
 }
