@@ -42,32 +42,9 @@ Time Limit:	1.0 sec(s) for each input file.
 
 
 
-
+//Time Taken : 1.69358s for 10 Test cases out of which first 4 cases are passed
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
-
-class VowelRecognition {
-    public static void main(String args[] ) throws Exception {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        int T=Integer.parseInt(br.readLine());
-        while(T-- > 0){
-            char ch[] = br.readLine().toCharArray();
-            int len=ch.length;
-            int v=0;
-            for(int i=0;i<len;i++){
-                for(int j=i;j<len;j++){
-                    for(int k=len-1;k>=j;k--){
-                        char c=ch[j];
-                        if(c=='a'||c=='e'||c=='i'||c=='o'||c=='u'||c=='A'||c=='E'||c=='I'||c=='O'||c=='U')
-                            v++;
-                    }
-                }
-            }
-            System.out.println(v);
-        }
-    }
-}
-
 
 class TestClass {
     public static void main(String args[] ) throws Exception {
@@ -76,22 +53,14 @@ class TestClass {
         while(T-- > 0){
             char ch[] = br.readLine().toCharArray();
             int len=ch.length;
-            int v=0;
+            long sum=0l;
             for(int i=0;i<len;i++){
                 char c=ch[i];
-                if(c=='a'||c=='e'||c=='i'||c=='o'||c=='u'||c=='A'||c=='E'||c=='I'||c=='O'||c=='U')
-                    v++;
+                if(c=='a'||c=='e'||c=='i'||c=='o'||c=='u'||c=='A'||c=='E'||c=='I'||c=='O'||c=='U'){
+                    sum += (len-i)*(i+1);
+                }
             }
-            int result = fact(len+v-1)/(fact(v)*fact(len-1));
-            System.out.println(result+1);
+            System.out.println(sum);
         }
-    }
-    
-    public static int fact(int num){
-        int sum = num;
-        for(int i = num-1; i > 1; i--){
-            sum *=i;
-        }
-        return sum;
     }
 }
